@@ -9,10 +9,11 @@ Rieoptax is library for Riemannian Optimization in [JAX](https://github.com/goog
 ### Blitz Intro to Riemannian Optimization
 
 
-Riemannian optimization  considers the following problem
+Riemannian optimization considers the following problem
 
-$$\min_{w \in \mathcal{M}} f(w)$$ where $f : \mathcal{M} \rightarrow \mathbb{R}$, and $\mathcal{M}$ denotes a Riemannian manifold. 
-Instead of considering  as a constrained problem, Riemannian optimization views it as an unconstrained problem on the manifold space. Riemannian (stochastic) gradient descent generalizes the Euclidean gradient descent with intrinsic updates on manifold, i.e., $w_{t+1} = {\rm Exp}_{w_t}(- \eta_t  {\rm grad} f(w_t))$, where ${\rm grad} f(w_t)$ is the Riemannian (stochastic) gradient, ${\rm Exp}_w(\cdot)$ is the Riemannian exponential map at $w$ and $\eta_t$ is the step size. 
+$$\min_{w \in \mathcal{M}} f(w)$$ 
+
+where $f : \mathcal{M} \rightarrow \mathbb{R}$, and $\mathcal{M}$ denotes a Riemannian manifold. Rather than approach this as a constrained optimization problem (e.g. constraining solutions to a given manifold embedded in an ambient space), Riemannian optimization views it as an unconstrained problem on the manifold space directly. Riemannian (stochastic) gradient descent generalizes Euclidean (stochastic) gradient descent with intrinsic updates on the manifold, i.e., $w_{t+1} = {\rm Exp}_{w_t}(- \eta_t  {\rm grad} f(w_t))$, where ${\rm grad} f(w_t)$ is the Riemannian gradient, ${\rm Exp}_w(\cdot)$ is the Riemannian exponential map at $w$, and $\eta_t$ is the step size.
 
 ### Quick start
  
